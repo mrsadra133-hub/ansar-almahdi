@@ -921,6 +921,49 @@ footer strong{color:#fff}
     </div>
   </section>
 
+  <!-- کارت نذورات -->
+
+<section class="donation-section" id="donations">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="over">SUPPORT THE HEYAT</div>
+      <h2>مشارکت در نذورات هیئت</h2>
+      <p>همراهی شما، چراغ این محفل را روشن نگه می‌دارد.</p>
+    </div>
+
+    <div class="donation-card"
+         id="donationCard"
+         onclick="flipDonationCard()"
+         role="button"
+         tabindex="0"
+         aria-label="چرخاندن کارت نذورات">
+
+      <div class="donation-card-inner">
+
+        <div class="donation-face">
+          <img src="assets/dey-card-front.png"
+               alt="روی کارت نذورات هیئت">
+        </div>
+
+        <div class="donation-face donation-back">
+          <img src="assets/dey-card-back.png"
+               alt="پشت کارت نذورات هیئت">
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="flip-hint">
+      برای مشاهده پشت کارت، روی آن لمس کنید ✦
+    </div>
+
+  </div>
+
+</section>
+  
   <!-- اطلاع‌رسانی -->
 
   <section id="last-notice" aria-labelledby="last-notice-title">
@@ -1128,6 +1171,22 @@ lightbox.addEventListener('touchend',e=>{
 
   touchX=null;
 },{passive:true});
+
+  function flipDonationCard(){
+  document.getElementById('donationCard')
+    .classList.toggle('flipped');
+}
+
+document.getElementById('donationCard')
+  .addEventListener('keydown',function(e){
+
+    if(e.key==='Enter' || e.key===' '){
+      e.preventDefault();
+      flipDonationCard();
+    }
+
+  });
+  
 </script>
 
 </body>
