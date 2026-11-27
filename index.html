@@ -3,10 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0b0c0d">
+<meta name="theme-color" content="#0b090a">
 <title>هیئت انصارالمهدی (عج)</title>
-
-<link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 <style>
 @font-face{
@@ -16,16 +14,16 @@
   font-display:swap;
 }
 
-:root{
-  --bg:#0b0c0d;
-  --panel:#151719;
-  --red:#d51f2a;
-  --gold:#c8a85e;
-  --text:#f7f7f7;
-  --muted:#b9b4ab;
-}
-
 *{box-sizing:border-box}
+
+:root{
+  --red:#d51f35;
+  --gold:#d5b46a;
+  --bg:#0b090a;
+  --panel:#171315;
+  --text:#f6f0ee;
+  --muted:#aaa0a0;
+}
 
 html{scroll-behavior:smooth}
 
@@ -40,7 +38,6 @@ body{
 button,a{font:inherit}
 button{cursor:pointer}
 a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
 
 .wrap{
   width:min(1120px,92%);
@@ -53,12 +50,13 @@ header{
   position:sticky;
   top:0;
   z-index:20;
-  background:rgba(11,12,13,.96);
-  border-bottom:1px solid #d51f2a40;
+  background:#0d0a0bf2;
+  border-bottom:1px solid #d51f3538;
+  backdrop-filter:blur(14px);
 }
 
 .nav{
-  min-height:68px;
+  min-height:70px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -77,18 +75,17 @@ header{
   display:block;
   color:var(--muted);
   font-size:10px;
-  font-weight:normal;
 }
 
 .seal{
-  width:38px;
-  height:38px;
+  width:39px;
+  height:39px;
   display:grid;
   place-items:center;
   border:1px solid var(--red);
   border-radius:50%;
-  color:#ed3943;
-  font-size:19px;
+  color:#f04b5b;
+  font-size:20px;
 }
 
 .links{
@@ -97,13 +94,13 @@ header{
   font-size:13px;
 }
 
-.links a:hover{color:#ed3943}
+.links a:hover{color:#f04b5b}
 
 .menu-toggle{
   display:none;
-  width:44px;
-  height:44px;
-  border:1px solid #d51f2a50;
+  width:43px;
+  height:43px;
+  border:1px solid #d51f3550;
   border-radius:9px;
   background:#ffffff08;
   color:white;
@@ -114,27 +111,22 @@ header{
   display:none;
   flex-direction:column;
   padding:8px 4% 15px;
-  border-top:1px solid #d51f2a30;
+  border-top:1px solid #d51f3530;
 }
 
 .mobile-links.open{display:flex}
-
-.mobile-links a{
-  padding:10px;
-  font-size:14px;
-}
+.mobile-links a{padding:10px;font-size:14px}
 
 /* صفحه اصلی */
 
 .hero{
-  min-height:calc(100vh - 68px);
+  min-height:calc(100vh - 70px);
   display:flex;
   align-items:center;
   text-align:center;
   background:
-    radial-gradient(ellipse at center,#351416 0%,transparent 60%),
-    linear-gradient(#101112,#0b0c0d);
-  overflow:hidden;
+    radial-gradient(ellipse at center,#351116 0%,transparent 65%),
+    linear-gradient(#100c0e,#0b090a);
 }
 
 .hero-inner{
@@ -143,16 +135,8 @@ header{
   padding:55px 0;
 }
 
-.bism{
-  font-size:24px;
-  margin-bottom:25px;
-}
-
-.eyebrow{
-  color:#ed3943;
-  font-size:12px;
-  letter-spacing:2px;
-}
+.bism{font-size:24px;margin-bottom:22px}
+.eyebrow{color:#f04b5b;font-size:12px;letter-spacing:2px}
 
 .hero-logo{
   width:min(420px,80vw);
@@ -172,7 +156,7 @@ header{
 .hero p{
   max-width:680px;
   margin:20px auto 25px;
-  color:#e9e4dc;
+  color:#e9e1df;
   font-size:14px;
 }
 
@@ -198,11 +182,10 @@ header{
   flex-wrap:wrap;
 }
 
-/* بخش‌ها */
+/* بخش‌های عمومی */
 
 section{padding:70px 0}
-
-.light{background:#111415}
+.light{background:#111011}
 
 .section-head{
   text-align:center;
@@ -216,7 +199,7 @@ section{padding:70px 0}
 }
 
 .section-head h2{
-  font-size:30px;
+  font-size:29px;
   margin:5px 0;
 }
 
@@ -232,23 +215,14 @@ section{padding:70px 0}
   max-width:790px;
   margin:auto;
   padding:30px;
-  background:linear-gradient(135deg,#1b201d,#141617);
-  border:1px solid #d51f2a45;
+  background:linear-gradient(135deg,#211719,#141112);
+  border:1px solid #d51f3545;
   border-radius:16px;
   text-align:center;
 }
 
-.hadith-label{
-  color:#ed3943;
-  font-size:12px;
-}
-
-.arabic{
-  font-size:28px;
-  margin:15px 0;
-  line-height:2;
-}
-
+.hadith-label{color:#ed3943;font-size:12px}
+.arabic{font-size:27px;margin:15px 0;line-height:2}
 .translation{font-size:14px;color:#e9e4dc}
 .source{font-size:11px;color:var(--muted);margin-top:12px}
 
@@ -264,7 +238,7 @@ section{padding:70px 0}
   min-height:44px;
   padding:8px 18px;
   border-radius:9px;
-  border:1px solid #d51f2a50;
+  border:1px solid #d51f3550;
   background:#ffffff0a;
   color:white;
 }
@@ -284,9 +258,9 @@ section{padding:70px 0}
   justify-content:space-between;
   text-align:right;
   padding:20px;
-  border:1px solid #d51f2a45;
+  border:1px solid #d51f3545;
   border-radius:14px;
-  background:linear-gradient(145deg,#1a1d1e,#111314);
+  background:linear-gradient(145deg,#211719,#111011);
   color:white;
 }
 
@@ -299,7 +273,7 @@ section{padding:70px 0}
   display:grid;
   place-items:center;
   border-radius:12px;
-  background:#d51f2a20;
+  background:#d51f3520;
   font-size:22px;
 }
 
@@ -324,7 +298,7 @@ section{padding:70px 0}
 
 .content-card{
   background:var(--panel);
-  border:1px solid #d51f2a35;
+  border:1px solid #d51f3535;
   border-radius:13px;
   padding:20px;
   margin:14px 0;
@@ -337,7 +311,7 @@ section{padding:70px 0}
   color:var(--muted);
   font-size:13px;
   background:#ffffff06;
-  border:1px dashed #d51f2a40;
+  border:1px dashed #d51f3540;
   border-radius:10px;
   padding:16px;
   text-align:center;
@@ -364,50 +338,285 @@ section{padding:70px 0}
   object-fit:cover;
 }
 
-/* کارت نذورات */
+/* ==========================
+   کارت نذورات - طراحی اختصاصی
+========================== */
 
 .donation-section{
   text-align:center;
   background:
-    radial-gradient(ellipse at center,#241012 0%,transparent 70%);
+    radial-gradient(ellipse at center,#301015 0%,transparent 70%);
 }
 
 .donation-section .wrap{width:min(1120px,96%)}
 
-.donation-card{
-  display:block;
-  position:relative;
+.card-scene{
   width:100%;
-  max-width:1100px;
-  aspect-ratio:1556 / 705;
-  margin:30px auto 0;
-  padding:0;
-  border:1px solid #d51f2a55;
-  border-radius:18px;
-  overflow:hidden;
-  background:#190407;
-  cursor:pointer;
-  box-shadow:
-    0 22px 55px #0009,
-    0 0 20px #d51f2a16;
-  perspective:1600px;
-  -webkit-perspective:1600px;
-  touch-action:manipulation;
+  max-width:850px;
+  aspect-ratio:1.586 / 1;
+  margin:35px auto 0;
+  perspective:1500px;
+  -webkit-perspective:1500px;
 }
 
-.donation-card img{
+.bank-card{
+  position:relative;
   width:100%;
   height:100%;
-  display:block;
-  object-fit:contain;
-  object-position:center;
-  border-radius:inherit;
+  transform-style:preserve-3d;
+  -webkit-transform-style:preserve-3d;
+  transition:transform .85s cubic-bezier(.2,.7,.2,1);
+  cursor:pointer;
+}
+
+.bank-card.flipped{
+  transform:rotateY(180deg);
+}
+
+.card-face{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  border-radius:23px;
+  border:1px solid #a86b65;
   backface-visibility:hidden;
   -webkit-backface-visibility:hidden;
-  transform:rotateY(0deg);
-  transition:transform .38s cubic-bezier(.2,.72,.25,1);
-  user-select:none;
-  -webkit-user-drag:none;
+  box-shadow:
+    0 25px 60px #000a,
+    0 0 24px #d51f3525,
+    inset 0 1px 0 #ffffff28;
+}
+
+/* روی کارت */
+
+.card-front{
+  background:
+    radial-gradient(ellipse at 90% 5%,#7d1723 0%,transparent 38%),
+    radial-gradient(ellipse at 10% 100%,#351014 0%,transparent 55%),
+    linear-gradient(135deg,#210c10,#3a1018 48%,#17090d);
+}
+
+/* بافت ظریف روی کارت */
+
+.card-front::before,
+.card-back::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.42;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      transparent 0px,
+      transparent 8px,
+      #ffffff0b 9px,
+      transparent 10px
+    );
+}
+
+/* نور لبه‌ها */
+
+.card-front::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  background:
+    linear-gradient(115deg,transparent 15%,#ffffff0a 35%,transparent 55%),
+    radial-gradient(ellipse at 50% 0%,#ff6b6b16,transparent 65%);
+}
+
+/* نوار بالایی */
+
+.card-top-line{
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  height:9%;
+  background:linear-gradient(90deg,#250e12,#512027,#270e12);
+  border-bottom:1px solid #ffffff1b;
+  z-index:1;
+}
+
+/* نوار مشکی مغناطیسی */
+
+.magnetic-strip{
+  position:absolute;
+  top:9%;
+  left:0;
+  right:0;
+  height:17%;
+  background:linear-gradient(
+    180deg,
+    #292727,
+    #080808 45%,
+    #151414
+  );
+  border-top:1px solid #ffffff18;
+  border-bottom:1px solid #ffffff12;
+  box-shadow:0 5px 16px #0008;
+  z-index:2;
+}
+
+/* اطلاعات بانک */
+
+.bank-name{
+  position:absolute;
+  top:31%;
+  right:6%;
+  color:#e8dfe0;
+  font-family:Arial,sans-serif;
+  font-size:clamp(11px,1.7vw,17px);
+  font-weight:bold;
+  letter-spacing:.5px;
+  z-index:3;
+}
+
+.card-indicator{
+  position:absolute;
+  top:32%;
+  left:6%;
+  width:15px;
+  height:15px;
+  border-radius:50%;
+  border:2px solid #e21c3b;
+  box-shadow:0 0 12px #e21c3b99;
+  z-index:3;
+}
+
+/* پنل شماره کارت */
+
+.card-number-panel{
+  position:absolute;
+  top:44%;
+  left:6%;
+  right:6%;
+  height:40%;
+  border-radius:16px;
+  background:
+    linear-gradient(135deg,#16090d,#210b11 55%,#13090b);
+  border:1px solid #8c3a4645;
+  box-shadow:
+    inset 0 2px 10px #0007,
+    0 4px 14px #0003;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  z-index:3;
+}
+
+.card-owner{
+  color:var(--gold);
+  font-size:clamp(13px,2.2vw,21px);
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.card-number{
+  direction:ltr;
+  font-family:Arial,sans-serif;
+  font-weight:bold;
+  font-size:clamp(18px,3.5vw,29px);
+  letter-spacing:2px;
+  color:#fff;
+  text-shadow:0 2px 8px #ffffff20;
+  white-space:nowrap;
+}
+
+.card-bottom{
+  position:absolute;
+  bottom:7%;
+  right:6%;
+  z-index:3;
+}
+
+.card-network{
+  display:inline-block;
+  padding:2px 11px;
+  border:1px solid #b28b4d70;
+  border-radius:5px;
+  color:#d9b46b;
+  font-family:Arial,sans-serif;
+  font-weight:bold;
+  font-size:clamp(10px,1.5vw,14px);
+  letter-spacing:1px;
+  background:#d3a34a10;
+}
+
+/* پشت کارت */
+
+.card-back{
+  transform:rotateY(180deg);
+  background:
+    radial-gradient(ellipse at 50% 100%,#52131b,transparent 60%),
+    linear-gradient(135deg,#230c10,#3c1018,#18090d);
+}
+
+.back-title{
+  position:absolute;
+  top:13%;
+  right:7%;
+  left:7%;
+  color:var(--gold);
+  font-size:clamp(13px,2vw,20px);
+  text-align:right;
+  z-index:2;
+}
+
+.back-magnetic{
+  position:absolute;
+  top:29%;
+  left:0;
+  right:0;
+  height:22%;
+  background:linear-gradient(180deg,#090909,#242222,#080808);
+  z-index:2;
+}
+
+.back-signature{
+  position:absolute;
+  top:59%;
+  right:7%;
+  left:7%;
+  height:15%;
+  background:#e6d9c3;
+  border-radius:5px;
+  display:flex;
+  align-items:center;
+  padding:0 16px;
+  color:#333;
+  font-size:clamp(10px,1.5vw,14px);
+  z-index:2;
+}
+
+.back-cvv{
+  position:absolute;
+  left:8%;
+  top:59%;
+  height:15%;
+  min-width:18%;
+  background:#fff;
+  color:#222;
+  display:grid;
+  place-items:center;
+  font-family:Arial,sans-serif;
+  font-size:14px;
+  z-index:3;
+}
+
+.back-description{
+  position:absolute;
+  bottom:9%;
+  right:7%;
+  left:7%;
+  color:#d8c7c5;
+  font-size:clamp(10px,1.5vw,14px);
+  text-align:center;
+  z-index:2;
 }
 
 /* دکمه‌های زیر کارت */
@@ -438,7 +647,7 @@ section{padding:70px 0}
 
 .copy-card-number{
   color:white;
-  background:linear-gradient(135deg,#f02d3d,#c41429 60%,#850d1b);
+  background:linear-gradient(135deg,#ed263c,#bd142b 60%,#850d1b);
   border:1px solid #ff7882;
   box-shadow:0 9px 26px #d51f2a40;
 }
@@ -446,7 +655,7 @@ section{padding:70px 0}
 .flip-hint{
   color:#eee;
   background:linear-gradient(135deg,#191416,#151113);
-  border:1px solid #ffffff18;
+  border:1px solid #ffffff22;
 }
 
 .copy-card-number:active,
@@ -474,25 +683,15 @@ section{padding:70px 0}
 /* اطلاعیه */
 
 .last-notice{
-  background:linear-gradient(135deg,#211416,#151719);
-  border:1px solid #d51f2a70;
+  background:linear-gradient(135deg,#261316,#151112);
+  border:1px solid #d51f3570;
   border-radius:18px;
   padding:30px;
-  position:relative;
 }
 
-.notice-kicker{
-  color:#ed3943;
-  font-size:11px;
-}
-
+.notice-kicker{color:#ed3943;font-size:11px}
 .last-notice h2{margin:5px 0 18px;font-size:28px}
-
-.notice-event{
-  font-size:20px;
-  font-weight:bold;
-  margin-bottom:18px;
-}
+.notice-event{font-size:20px;font-weight:bold;margin-bottom:18px}
 
 .notice-details{
   display:grid;
@@ -515,7 +714,7 @@ section{padding:70px 0}
 }
 
 .notice-invite{
-  border-top:1px solid #d51f2a40;
+  border-top:1px solid #d51f3540;
   padding-top:15px;
   margin-top:20px;
   font-size:14px;
@@ -524,7 +723,7 @@ section{padding:70px 0}
 /* پاورقی */
 
 footer{
-  border-top:1px solid #d51f2a40;
+  border-top:1px solid #d51f3540;
   padding:28px 0 35px;
   text-align:center;
   color:var(--muted);
@@ -533,7 +732,7 @@ footer{
 
 footer strong{color:white}
 
-/* نمایش بزرگ تصاویر */
+/* گالری */
 
 .lightbox{
   position:fixed;
@@ -577,19 +776,20 @@ footer strong{color:white}
 
 @media(max-width:560px){
   section{padding:52px 0}
-
   .section-head h2{font-size:24px}
 
-  .donation-card{
-    margin-top:22px;
-    border-radius:12px;
-    aspect-ratio:1556 / 705;
+  .card-scene{
+    width:100%;
+    aspect-ratio:1.586 / 1;
+    margin-top:24px;
   }
 
-  .donation-actions{
-    gap:9px;
-    margin-top:12px;
-  }
+  .card-face{border-radius:14px}
+  .card-number-panel{border-radius:10px}
+  .card-owner{margin-bottom:5px}
+  .card-number{letter-spacing:1px}
+
+  .donation-actions{gap:9px;margin-top:12px}
 
   .copy-card-number,
   .flip-hint{
@@ -603,6 +803,13 @@ footer strong{color:white}
   .last-notice{padding:22px 18px}
   .gallery{grid-template-columns:repeat(2,1fr)}
   .arabic{font-size:23px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    scroll-behavior:auto!important;
+    transition:none!important;
+  }
 }
 </style>
 </head>
@@ -627,7 +834,7 @@ footer strong{color:white}
     </nav>
 
     <button class="menu-toggle" id="menuToggle"
-      aria-label="باز کردن منو" aria-expanded="false">☰</button>
+      aria-label="باز کردن منو">☰</button>
   </div>
 
   <nav class="mobile-links" id="mobileLinks">
@@ -766,7 +973,7 @@ footer strong{color:white}
   </div>
 </section>
 
-<!-- نذورات -->
+<!-- کارت نذورات -->
 
 <section class="donation-section" id="donations">
   <div class="wrap">
@@ -777,14 +984,57 @@ footer strong{color:white}
       <p>همراهی شما، چراغ این محفل را روشن نگه می‌دارد.</p>
     </div>
 
-    <button class="donation-card" id="donationCard"
-      type="button" aria-label="نمایش پشت کارت نذورات">
+    <div class="card-scene">
 
-      <img id="donationCardImage"
-        src="assets/dey-card-front.png"
-        alt="روی کارت نذورات هیئت"
-        draggable="false">
-    </button>
+      <div class="bank-card" id="bankCard" role="button"
+        tabindex="0" aria-label="چرخاندن کارت نذورات"
+        aria-pressed="false">
+
+        <!-- روی کارت -->
+
+        <div class="card-face card-front">
+
+          <div class="card-top-line"></div>
+          <div class="magnetic-strip"></div>
+
+          <div class="bank-name">SAMAN BANK</div>
+          <div class="card-indicator"></div>
+
+          <div class="card-number-panel">
+            <div class="card-owner">محمدمهدی شریفی</div>
+            <div class="card-number">6219&nbsp; 8619&nbsp; 0425&nbsp; 3118</div>
+          </div>
+
+          <div class="card-bottom">
+            <span class="card-network">SHETAB</span>
+          </div>
+
+        </div>
+
+        <!-- پشت کارت -->
+
+        <div class="card-face card-back">
+
+          <div class="back-title">SAMAN BANK</div>
+
+          <div class="back-magnetic"></div>
+
+          <div class="back-signature">
+            امضای صاحب کارت
+          </div>
+
+          <div class="back-cvv">---</div>
+
+          <div class="back-description">
+            کارت بانکی سامان · عضو شبکه شتاب
+            <br>
+            سپاس از همراهی و نذورات شما
+          </div>
+
+        </div>
+
+      </div>
+    </div>
 
     <div class="donation-actions">
 
@@ -924,69 +1174,33 @@ function closeArchive(){
   document.getElementById('events').scrollIntoView({behavior:'smooth'});
 }
 
-/* چرخش کارت */
+/* چرخش سه‌بعدی کارت */
 
-const donationCard=document.getElementById('donationCard');
-const donationCardImage=document.getElementById('donationCardImage');
+const bankCard=document.getElementById('bankCard');
+const flipHint=document.getElementById('flipHint');
 
-const cardFront='assets/dey-card-front.png';
-const cardBack='assets/dey-card-back.png';
+function flipCard(){
+  const flipped=bankCard.classList.toggle('flipped');
 
-let showingBack=false;
-let cardIsFlipping=false;
-
-function flipDonationCard(){
-
-  if(cardIsFlipping)return;
-
-  cardIsFlipping=true;
-
-  donationCardImage.style.transform='rotateY(90deg)';
-
-  let changed=false;
-
-  function changeSide(){
-    if(changed)return;
-    changed=true;
-
-    showingBack=!showingBack;
-
-    donationCardImage.src=showingBack?cardBack:cardFront;
-
-    donationCardImage.alt=showingBack
-      ?'پشت کارت نذورات هیئت'
-      :'روی کارت نذورات هیئت';
-
-    donationCard.setAttribute('aria-pressed',String(showingBack));
-
-    donationCardImage.style.transition='none';
-    donationCardImage.style.transform='rotateY(-90deg)';
-
-    requestAnimationFrame(()=>{
-      requestAnimationFrame(()=>{
-        donationCardImage.style.transition='transform .38s cubic-bezier(.2,.72,.25,1)';
-        donationCardImage.style.transform='rotateY(0deg)';
-
-        setTimeout(()=>{
-          cardIsFlipping=false;
-        },400);
-      });
-    });
-  }
-
-  donationCardImage.addEventListener('transitionend',changeSide,{once:true});
-  setTimeout(changeSide,450);
+  bankCard.setAttribute('aria-pressed',String(flipped));
 }
 
-donationCard.addEventListener('click',flipDonationCard);
-document.getElementById('flipHint').addEventListener('click',flipDonationCard);
+bankCard.addEventListener('click',flipCard);
+
+bankCard.addEventListener('keydown',event=>{
+  if(event.key==='Enter' || event.key===' '){
+    event.preventDefault();
+    flipCard();
+  }
+});
+
+flipHint.addEventListener('click',flipCard);
 
 /* کپی شماره کارت */
 
-const cardNumber='5029381068431303';
+const cardNumber='6219861904253118';
 
 document.getElementById('copyCardNumber').addEventListener('click',async()=>{
-
   const feedback=document.getElementById('copyFeedback');
 
   try{
@@ -1009,7 +1223,7 @@ document.getElementById('copyCardNumber').addEventListener('click',async()=>{
     feedback.textContent='شماره کارت با موفقیت کپی شد.';
 
   }catch(error){
-    feedback.textContent='شماره کارت: ۵۰۲۹ ۳۸۱۰ ۶۸۴۳ ۱۳۰۳';
+    feedback.textContent='شماره کارت: 6219 8619 0425 3118';
   }
 });
 
@@ -1037,8 +1251,8 @@ function hideImage(){
   document.body.style.overflow='';
 }
 
-document.addEventListener('keydown',e=>{
-  if(e.key==='Escape')hideImage();
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape')hideImage();
 });
 
 </script>
