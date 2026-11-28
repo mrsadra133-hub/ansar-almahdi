@@ -834,11 +834,101 @@ footer strong{color:white}
  .madahi-title{font-size:10px}
 }
 
+/* چراغانی جشن */
+.birthday-lights {
+  height: 55px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 15px 8px 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #071b13, #07110d);
+  z-index: 25;
+}
+
+.birthday-lights::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -5%;
+  width: 110%;
+  height: 30px;
+  border-bottom: 2px solid #b8a16b;
+  border-radius: 50%;
+}
+
+.birthday-lights span {
+  position: relative;
+  z-index: 1;
+  width: 10px;
+  height: 15px;
+  border-radius: 50% 50% 45% 45%;
+  background: var(--light-color);
+  box-shadow: 0 0 8px var(--light-color),
+              0 0 18px var(--light-color);
+  animation: birthdayGlow 1.5s infinite alternate;
+}
+
+.birthday-lights span:nth-child(3n) {
+  animation-delay: .4s;
+}
+
+.birthday-lights span:nth-child(3n + 1) {
+  animation-delay: .8s;
+}
+
+.birthday-lights span:nth-child(1) { --light-color: #20e6a0; }
+.birthday-lights span:nth-child(2) { --light-color: #f5d77b; }
+.birthday-lights span:nth-child(3) { --light-color: #ffffff; }
+.birthday-lights span:nth-child(4) { --light-color: #ff6688; }
+.birthday-lights span:nth-child(5) { --light-color: #20e6a0; }
+.birthday-lights span:nth-child(6) { --light-color: #f5d77b; }
+.birthday-lights span:nth-child(7) { --light-color: #ffffff; }
+.birthday-lights span:nth-child(8) { --light-color: #ff6688; }
+.birthday-lights span:nth-child(9) { --light-color: #20e6a0; }
+.birthday-lights span:nth-child(10) { --light-color: #f5d77b; }
+.birthday-lights span:nth-child(11) { --light-color: #ffffff; }
+.birthday-lights span:nth-child(12) { --light-color: #ff6688; }
+
+@keyframes birthdayGlow {
+  from {
+    opacity: .45;
+    transform: scale(.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .birthday-lights span {
+    animation: none;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
+  <div class="birthday-lights">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+  
 <header>
   <div class="wrap nav">
     <a class="brand" href="#home">
